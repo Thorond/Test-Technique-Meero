@@ -1,4 +1,4 @@
-var flècheMonté = document.querySelector(".flecheRemonte");
+var flecheMonte = document.querySelector(".flecheRemonte");
 var section = document.querySelector("section");
 var remonte = false;
 var inter ;
@@ -12,12 +12,12 @@ section.addEventListener("click", function(){ // lorsque l'utilisateur clique su
 	}
 });
 
-flècheMonté.addEventListener("click", function() {  // initiale le processus de défilement
+flecheMonte.addEventListener("click", function() {  // initiale le processus de défilement
 	remonte = true;
-	inter = setInterval("remonté()",1);
+	inter = setInterval("remont()",1);
 });
 
-function remonté(){
+function remont(){
 	if ( document.body.scrollTop != 0 ) { // pour chrome et autre 
 		if ( remonte ) {
 			document.body.scrollTop = document.body.scrollTop - 3 ;
